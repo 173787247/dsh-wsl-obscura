@@ -15,6 +15,19 @@ DeepSeek Harness tools for **[Obscura](https://github.com/h4ckf0r0day/obscura)**
 
 ---
 
+## Compatibility
+
+| Field | Value |
+|-------|-------|
+| **Plugin** | `dsh-wsl-obscura` **0.1.0** |
+| **Minimum dsh** | ≥ **0.1.2** (web UI one-shot `?token=` on Windows relay `:3081`) |
+| **Latest verified** | See [dsh-wsl-kit Compatibility](https://github.com/173787247/dsh-wsl-kit#compatibility-2026-09) (currently **`0.1.5-rc.1`**) — single source of truth for the suite |
+| **Kit set** | optional — **not** in default `KIT_SET` lists |
+| **Cloud Flash** | Use model id **`deepseek-flash`** (V4.1 Flash) in `~/.dsh/settings.yaml` / `llm-deepseek` — not configured by this plugin |
+| **Agent Teams** | Upstream experimental; not required here |
+
+Suite floor versions: kit [`check-plugin-versions.sh`](https://github.com/173787247/dsh-wsl-kit/blob/master/scripts/check-plugin-versions.sh). Fault tree: [TROUBLESHOOTING.md](https://github.com/173787247/dsh-wsl-kit/blob/master/docs/TROUBLESHOOTING.md).
+
 ## Why
 
 Agent work that needs page text, JS eval, or stealth fetch should hit a headless engine. Obscura already builds on Windows (`obscura.exe`). This plugin runs it from WSL via interop (`/mnt/c/.../obscura.exe`).
