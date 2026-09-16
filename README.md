@@ -80,3 +80,15 @@ npm test
 ## License
 
 MIT
+
+## Where it sits
+
+Optional. Drives the Obscura headless browser. Not in install.sh.
+
+```mermaid
+flowchart LR
+  agent["dsh agent"] --> tool["dsh-wsl-obscura"] --> browser["Obscura headless browser"]
+```
+
+Suite diagram and version snapshot: [dsh-wsl-kit](https://github.com/173787247/dsh-wsl-kit#how-the-pieces-fit). This plugin is **0.1.0** (not in install.sh). Do not copy that matrix into this README.
+

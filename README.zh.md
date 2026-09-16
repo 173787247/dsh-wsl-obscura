@@ -13,6 +13,18 @@ DeepSeek Harness 工具：从 **WSL** 调用 **[Obscura](https://github.com/h4ck
 
 [English → README.md](./README.md)
 
+## 在套件里的位置
+
+可选。驱动 Obscura 无头浏览器。不在 install.sh 里。
+
+```mermaid
+flowchart LR
+  agent["dsh agent"] --> tool["dsh-wsl-obscura"] --> browser["Obscura 无头浏览器"]
+```
+
+整套关系图和版本快照：[dsh-wsl-kit 中文说明](https://github.com/173787247/dsh-wsl-kit/blob/master/README.zh.md)。本插件是 **0.1.0**（不在 install.sh）。不要把那份总表抄进本 README。
+
+
 ---
 ## 兼容性
 
