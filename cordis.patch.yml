@@ -6,4 +6,4 @@
         maxOutputChars: 32000
         defaultStealth: true
         # WSL path or Windows path to obscura.exe (optional if OBSCURA_BIN / default candidates hit)
-        # binaryPath: /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe
+        # binaryPath: /path/to/obscura/target/release/obscura.exe

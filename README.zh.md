@@ -52,14 +52,14 @@ flowchart LR
    - cordis `config.binaryPath`
    - 环境变量 `OBSCURA_BIN` / `OBSCURA_PATH`
    - 默认候选（本机脚手架路径）：  
-     `/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe`
+     `<obscura-checkout>/target/release/obscura.exe`
 
 ## 安装
 
 本地仓（未发 GitHub 时）：
 
 ```sh
-dsh plugin --profile web add /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/dsh-wsl-obscura
+dsh plugin --profile web add /path/to/dsh-wsl-obscura
 ```
 
 发布后：
@@ -79,7 +79,7 @@ dsh plugin --profile web add github:173787247/dsh-wsl-obscura
     timeoutMs: 60000
     maxOutputChars: 32000
     defaultStealth: true
-    binaryPath: /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe
+    binaryPath: <obscura-checkout>/target/release/obscura.exe
 ```
 
 ## 测试

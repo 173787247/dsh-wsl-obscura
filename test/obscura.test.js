@@ -21,12 +21,12 @@ describe("obscura path + url", () => {
 
   it("maps Windows ↔ WSL paths", () => {
     assert.equal(
-      toWslPath("C:\\Users\\rchua\\Desktop\\obscura.exe"),
-      "/mnt/c/Users/rchua/Desktop/obscura.exe",
+      toWslPath("C:\\Users\\tester\\Desktop\\obscura.exe"),
+      "/mnt/c/Users/tester/Desktop/obscura.exe",
     );
     assert.equal(
-      toWinPath("/mnt/c/Users/rchua/Desktop/obscura.exe"),
-      "C:\\Users\\rchua\\Desktop\\obscura.exe",
+      toWinPath("/mnt/c/Users/tester/Desktop/obscura.exe"),
+      "C:\\Users\\tester\\Desktop\\obscura.exe",
     );
   });
 

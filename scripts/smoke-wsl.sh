@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
-BIN=/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe
-PLUGIN=/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/dsh-wsl-obscura
+PLUGIN="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# obscura's own checkout normally sits beside this one; override with OBSCURA_BIN.
+BIN="${OBSCURA_BIN:-$(dirname "$PLUGIN")/obscura/target/release/obscura.exe}"
 
 echo "== WSL interop version =="
 "$BIN" --version

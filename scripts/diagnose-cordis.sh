@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-WEB=/home/rchua/.dsh/profiles/web
+WEB="${DSH_PROFILE_DIR:-$HOME/.dsh/profiles/web}"
 echo "=== package.json deps ==="
 grep -n obscura "$WEB/package.json" || true
 echo "=== node_modules link ==="
@@ -15,8 +15,8 @@ cat "$WEB/cordis.patch.yml"
 echo "=== cordis.yml snippet around plugins ==="
 grep -n "dsh-wsl-browser\|plugins\|id:" "$WEB/cordis.yml" | head -60
 echo "=== plugin cordis.patch ==="
-cat /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/dsh-wsl-obscura/cordis.patch.yml
+cat "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"/cordis.patch.yml
 # Compare with how browser got into profile
 echo "=== browser package dsh.bundle ==="
-node -e "const p=require('/home/rchua/.dsh/profiles/web/node_modules/dsh-wsl-browser/package.json'); console.log(JSON.stringify(p.dsh,null,2))"
-node -e "const p=require('/home/rchua/.dsh/profiles/web/node_modules/dsh-wsl-obscura/package.json'); console.log(JSON.stringify(p.dsh,null,2))"
+node -e "const p=require('"$WEB"/node_modules/dsh-wsl-browser/package.json'); console.log(JSON.stringify(p.dsh,null,2))"
+node -e "const p=require('"$WEB"/node_modules/dsh-wsl-obscura/package.json'); console.log(JSON.stringify(p.dsh,null,2))"

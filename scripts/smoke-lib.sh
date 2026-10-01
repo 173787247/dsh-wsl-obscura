@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Smoke: exercise plugin lib against real obscura.exe from WSL (no dsh UI needed).
 set -euo pipefail
-PLUGIN=/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/dsh-wsl-obscura
+PLUGIN="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PLUGIN"
 node --input-type=module <<'EOF'
 import { resolveObscuraBin, buildFetchArgs, runObscura, isSafeHttpUrl } from "./lib/obscura.js";

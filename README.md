@@ -41,14 +41,14 @@ For richer agent tools (navigate / click / screenshot as MCP tools), prefer **Ob
    - `config.binaryPath` in cordis
    - env `OBSCURA_BIN` / `OBSCURA_PATH` (WSL or `C:\...` path)
    - default candidate (local scaffold):  
-     `/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe`
+     `<obscura-checkout>/target/release/obscura.exe`
 
 ## Install
 
 Local clone (recommended while unpublished):
 
 ```sh
-dsh plugin --profile web add /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/dsh-wsl-obscura
+dsh plugin --profile web add /path/to/dsh-wsl-obscura
 ```
 
 When published:
@@ -68,7 +68,7 @@ Restart dsh web after add (kit: `scripts/restart-dsh-web.sh`).
     timeoutMs: 60000
     maxOutputChars: 32000
     defaultStealth: true
-    binaryPath: /mnt/c/Users/rchua/Desktop/AIFullStackDevelopment/obscura/target/release/obscura.exe
+    binaryPath: <obscura-checkout>/target/release/obscura.exe
 ```
 
 ## Tests
